@@ -1,27 +1,56 @@
-# React + TypeScript + Vite
+# BitChest - Résumé de l'Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+BitChest est une application de gestion de portefeuille de crypto-monnaies avec une interface d'administration développée en React.js et Vite.js. L'application vise à offrir une expérience utilisateur conviviale pour deux types de profils : les Administrateurs et les Clients.
 
-Currently, two official plugins are available:
+## Fonctionnalités Principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Pour les Administrateurs
 
-## Expanding the ESLint configuration
+- Gestion des données personnelles.
+- Gestion des clients, y compris la création, l'affichage, la modification et la suppression des données utilisateur.
+- Gestion des droits utilisateur (Administrateur ou Client).
+- Consultation des cours des crypto-monnaies.
+- Affichage de la liste des crypto-monnaies et de leurs cours.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Pour les Clients
 
-- Configure the top-level `parserOptions` property like this:
+- Gestion des données personnelles.
+- Gestion du portefeuille, y compris l'affichage du contenu, du solde en euro, et la possibilité de vendre une crypto-monnaie.
+- Consultation des cours des crypto-monnaies.
+- Affichage de la liste des crypto-monnaies et de leurs cours.
+- Consultation de la courbe de progression de chaque crypto-monnaie.
+- Achat de crypto-monnaies au cours actuel.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## Le Portefeuille
+
+- Chaque client possède un portefeuille privé contenant ses achats en crypto-monnaies.
+- Les clients peuvent voir la liste des crypto-monnaies qu'ils possèdent, les détails des achats (date, quantité, cours), et la plus-value actuelle.
+
+## L'installation:
+
+Pour récupérer le code source du projet, utilisez la commande suivante :
+
+```bash
+git clone https://github.com/kohai-fred/bitchest-front.git
+cd bitchest-front
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Copiez le fichier `.env.example` et renommez-le en `.env`.
+
+3. Installez les dépendances en utilisant yarn :
+
+```bash
+yarn install
+```
+
+4. Compilez les ressources du frontend :
+
+```bash
+yarn dev
+```
+
+5. Vous pouvez maintenant accéder à l'interface d'administration en visitant l'URL suivante dans votre navigateur :
+
+```
+https://127.0.0.1:5173
+```
